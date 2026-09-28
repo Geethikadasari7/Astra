@@ -106,28 +106,63 @@ Recommendations are tied back to memory and historical context, making them more
 ## Architecture
 
 ```text
-┌────────────────────────────────────────────┐
-│          ASTRA Android App               │
-│  Jetpack Compose + ViewModel + Screens    │
-└──────────────────────┬─────────────────────┘
-                       │
-                       ▼
-┌────────────────────────────────────────────┐
-│          Repository / API Layer            │
-│     Retrofit + OkHttp + Moshi + Coroutines│
-└──────────────────────┬─────────────────────┘
-                       │
-                       ▼
-┌────────────────────────────────────────────┐
-│             Hindsight API Service           │
-│    Memory retrieval + deal intelligence    │
-└──────────────────────┬─────────────────────┘
-                       │
-                       ▼
-┌────────────────────────────────────────────┐
-│             AI + Memory Orchestration       │
-│       Deal context, recommendations, insight│
-└────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────┐
+│                     ASTRA Android App                       │
+│  Landing → Onboarding → Dashboard → Deals → Deal Detail     │
+│  Memory → Insights → Time Machine → Ask ASTRA → Follow-up   │
+└───────────────────────────────┬──────────────────────────────┘
+                                │
+                                ▼
+┌──────────────────────────────────────────────────────────────┐
+│                 Presentation Layer (Compose UI)              │
+│  Screens, Navigation, ViewModel, State, Adaptive Layout     │
+└───────────────────────────────┬──────────────────────────────┘
+                                │
+                                ▼
+┌──────────────────────────────────────────────────────────────┐
+│                   Repository / Data Layer                    │
+│  AstraRepositoryImpl → Retrofit API → Hindsight endpoints   │
+│  local memory, preferences, and deal context management     │
+└───────────────────────────────┬──────────────────────────────┘
+                                │
+                                ▼
+┌──────────────────────────────────────────────────────────────┐
+│                       AI + Memory Layer                      │
+│  Hindsight Memory Retrieval → Deal Summary → Recommendation │
+│  Follow-up generation → Timeline reasoning → Evidence       │
+└───────────────────────────────┬──────────────────────────────┘
+                                │
+                                ▼
+┌──────────────────────────────────────────────────────────────┐
+│                     External Services                         │
+│  Hindsight API, AI inference, structured sales intelligence │
+└──────────────────────────────────────────────────────────────┘
+```
+
+### App flow
+
+```text
+User opens ASTRA
+      ↓
+Landing screen
+      ↓
+Onboarding / authentication
+      ↓
+Dashboard overview
+      ↓
+Select deal / stakeholder / account
+      ↓
+Review memory timeline and insights
+      ↓
+Ask ASTRA for next action
+      ↓
+System retrieves relevant historical context
+      ↓
+AI recommends action with evidence
+      ↓
+User reviews recommendation and follows up
+      ↓
+Outcome is saved back into deal memory
 ```
 
 ---
@@ -191,14 +226,15 @@ ASTRA/
 
 ---
 
-## Setup
+## Setup on your own PC
 
 ### Prerequisites
 
 - Android Studio
 - JDK 17+
-- Android SDK configured in Android Studio
-- GitHub account for repository access
+- Android SDK installed and configured
+- Git installed
+- A GitHub account (optional, if you want to clone or push changes)
 
 ### 1. Clone the repository
 
@@ -207,7 +243,24 @@ git clone https://github.com/Geethikadasari7/Astra.git
 cd Astra
 ```
 
-### 2. Configure local environment
+### 2. Install Android Studio
+
+Download and install Android Studio from:
+
+https://developer.android.com/studio
+
+Then open the project in Android Studio and let Gradle sync.
+
+### 3. Configure Android SDK
+
+If Android Studio prompts you to install the SDK, accept the setup. Make sure the following are installed:
+
+- Android SDK Platform
+- Android SDK Build-Tools
+- Android Emulator (optional)
+- Platform Tools
+
+### 4. Add your local environment variables
 
 Create or edit `local.properties` in the project root:
 
@@ -217,23 +270,52 @@ HINDSIGHT_API_KEY=your_api_key_here
 HINDSIGHT_BASE_URL=https://api.hindsight.vectorize.io/
 ```
 
-> Do not commit real API keys to GitHub. `local.properties` is typically kept local.
+> This file is local to your machine. Do not commit your real API key to GitHub.
 
-### 3. Build the app
+### 5. Build the app
 
 ```bash
 ./gradlew assembleDebug
 ```
 
-### 4. Run tests
+### 6. Run tests
 
 ```bash
 ./gradlew test
 ```
 
-### 5. Launch the app
+### 7. Launch on emulator or device
 
-Open the project in Android Studio and run the app on an emulator or physical device.
+Open Android Studio, choose an emulator or connected device, and click Run.
+
+---
+
+## Download ASTRA app
+
+You can run the app directly from source using Android Studio, or build an APK for installation on a device.
+
+### Build APK
+
+```bash
+./gradlew assembleDebug
+```
+
+The generated APK will usually be in:
+
+```text
+app/build/outputs/apk/debug/app-debug.apk
+```
+
+### Install APK on Android device
+
+1. Enable "Install unknown apps" or "Allow APK installs" on your phone.
+2. Transfer the APK to the device.
+3. Tap the file to install.
+4. Open the app once installation completes.
+
+### Optional: install from a release build
+
+If a signed release APK or AAB is later published, you can distribute it using GitHub Releases or a private distribution channel.
 
 ---
 
