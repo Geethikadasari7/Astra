@@ -12,7 +12,9 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Geethikadasari7/Astra/main/app/src/main/res/drawable/placeholder.png" alt="ASTRA app preview" width="420" />
+  <img src="<img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/2d6f416b-26fd-4ebc-973b-63a33684e086" />
+  <img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/33112e1e-97d8-4669-ae75-1f2df8f649e1" />
+" alt="ASTRA app preview" width="420" />
 </p>
 
 ---
