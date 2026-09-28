@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Outer ambient glow ring -->
+    <path
+        android:fillColor="#1AC96B5C"
+        android:pathData="M54,54 m-32,0 a32,32 0 1,0 64,0 a32,32 0 1,0 -64,0" />
+
+    <!-- Orbital ring 1 (outer node track) -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M54,54 m-26,0 a26,26 0 1,0 52,0 a26,26 0 1,0 -52,0"
+        android:strokeColor="#40F1D4CF"
+        android:strokeWidth="1.5" />
+
+    <!-- Abstract 'A' constellation connecting lines -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M54,28 L36,72 M54,28 L72,72 M42,57 L66,57"
+        android:strokeColor="#80F1D4CF"
+        android:strokeLineCap="round"
+        android:strokeWidth="2" />
+
+    <!-- Central Glowing Intelligence Orb (outer glow) -->
+    <path
+        android:fillColor="#40C96B5C"
+        android:pathData="M54,54 m-16,0 a16,16 0 1,0 32,0 a16,16 0 1,0 -32,0" />
+
+    <!-- Central Glowing Intelligence Orb (mid core) -->
+    <path
+        android:fillColor="#C96B5C"
+        android:pathData="M54,54 m-10,0 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0" />
+
+    <!-- Central Glowing Intelligence Orb (inner core) -->
+    <path
+        android:fillColor="#F1D4CF"
+        android:pathData="M54,54 m-5,0 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0" />
+
+    <!-- Orbiting Memory Nodes -->
+    <!-- Top Apex Node -->
+    <path
+        android:fillColor="#F1D4CF"
+        android:pathData="M54,28 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0" />
+    <path
+        android:fillColor="#C96B5C"
+        android:pathData="M54,28 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+
+    <!-- Left Base Node -->
+    <path
+        android:fillColor="#F1D4CF"
+        android:pathData="M36,72 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0" />
+    <path
+        android:fillColor="#C96B5C"
+        android:pathData="M36,72 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+
+    <!-- Right Base Node -->
+    <path
+        android:fillColor="#F1D4CF"
+        android:pathData="M72,72 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0" />
+    <path
+        android:fillColor="#C96B5C"
+        android:pathData="M72,72 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+
+    <!-- Crossbar Left Intersection Node -->
+    <path
+        android:fillColor="#F1D4CF"
+        android:pathData="M42,57 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+
+    <!-- Crossbar Right Intersection Node -->
+    <path
+        android:fillColor="#F1D4CF"
+        android:pathData="M66,57 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+
+    <!-- Outer Satellite Memory Node (top right orbit) -->
+    <path
+        android:fillColor="#F1D4CF"
+        android:pathData="M76,38 m-3.5,0 a3.5,3.5 0 1,0 7,0 a3.5,3.5 0 1,0 -7,0" />
+    <path
+        android:fillColor="#171717"
+        android:pathData="M76,38 m-1.5,0 a1.5,1.5 0 1,0 3,0 a1.5,1.5 0 1,0 -3,0" />
+
+    <!-- Outer Satellite Memory Node (bottom left orbit) -->
+    <path
+        android:fillColor="#C96B5C"
+        android:pathData="M30,42 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+
+</vector>
