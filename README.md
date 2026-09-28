@@ -106,64 +106,65 @@ Recommendations are tied back to memory and historical context, making them more
 ## Architecture
 
 ```text
-┌──────────────────────────────────────────────────────────────┐
-│                     ASTRA Android App                       │
-│  Landing → Onboarding → Dashboard → Deals → Deal Detail     │
-│  Memory → Insights → Time Machine → Ask ASTRA → Follow-up   │
-└───────────────────────────────┬──────────────────────────────┘
-                                │
-                                ▼
-┌──────────────────────────────────────────────────────────────┐
-│                 Presentation Layer (Compose UI)              │
-│  Screens, Navigation, ViewModel, State, Adaptive Layout     │
-└───────────────────────────────┬──────────────────────────────┘
-                                │
-                                ▼
-┌──────────────────────────────────────────────────────────────┐
-│                   Repository / Data Layer                    │
-│  AstraRepositoryImpl → Retrofit API → Hindsight endpoints   │
-│  local memory, preferences, and deal context management     │
-└───────────────────────────────┬──────────────────────────────┘
-                                │
-                                ▼
-┌──────────────────────────────────────────────────────────────┐
-│                       AI + Memory Layer                      │
-│  Hindsight Memory Retrieval → Deal Summary → Recommendation │
-│  Follow-up generation → Timeline reasoning → Evidence       │
-└───────────────────────────────┬──────────────────────────────┘
-                                │
-                                ▼
-┌──────────────────────────────────────────────────────────────┐
-│                     External Services                         │
-│  Hindsight API, AI inference, structured sales intelligence │
-└──────────────────────────────────────────────────────────────┘
+Open App
+   ↓
+Home
+   ↓
+Tourist Login / Register
+   ↓
+Tourist Dashboard
+   ↓
+Quick Actions
+   ├── Alerts
+   ├── Safe Route
+   ├── Family Tracking
+   ├── Language Help
+   ├── Helplines
+   ├── FIR Guidance
+   ├── Panic Button
+   └── Officer Login / Register
+
+                 ↓
+     Officer Dashboard
+                 ↓
+       Incident Details
+                 ↓
+          Emergency Response
+                 ↓
+     Travel / Rescue / Medical Help
+                 ↓
+      Recommendation Engine
+                 ↓
+      Update Notes / Timeline
+                 ↓
+   Save Info / Close Escalation
 ```
 
-### App flow
+### ASTRA app flow
 
 ```text
-User opens ASTRA
+Landing Screen
       ↓
-Landing screen
+Onboarding / Authentication
       ↓
-Onboarding / authentication
+Dashboard
       ↓
-Dashboard overview
+Deal Overview
       ↓
-Select deal / stakeholder / account
+Stakeholder Tracking
       ↓
-Review memory timeline and insights
+Memory Timeline
       ↓
-Ask ASTRA for next action
+Ask ASTRA
       ↓
-System retrieves relevant historical context
+Relevant Historical Recall
       ↓
-AI recommends action with evidence
+Recommendation + Evidence
       ↓
-User reviews recommendation and follows up
+Follow-up / Action Plan
       ↓
-Outcome is saved back into deal memory
-```
+Outcome saved to memory
+``` 
 
 ---
 
