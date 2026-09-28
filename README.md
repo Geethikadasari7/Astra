@@ -1,0 +1,289 @@
+# ✦ ASTRA
+### Adaptive Sales & Transactional Relationship Assistant
+
+> AI-powered sales intelligence for enterprise teams that need to remember context, learn from outcomes, and act with better judgment.
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android" alt="Android" />
+  <img src="https://img.shields.io/badge/Language-Kotlin-7F52FF?style=for-the-badge&logo=kotlin" alt="Kotlin" />
+  <img src="https://img.shields.io/badge/UI-Jetpack%20Compose-4285F4?style=for-the-badge&logo=jetpackcompose" alt="Compose" />
+  <img src="https://img.shields.io/badge/Memory-Hindsight-6366F1?style=for-the-badge" alt="Hindsight" />
+  <img src="https://img.shields.io/badge/Status-MVP-success?style=for-the-badge" alt="Status" />
+</p>
+
+---
+
+## Overview
+
+ASTRA is a memory-first Android application designed for sales teams working in complex enterprise deals. Instead of treating customer interactions as isolated events, ASTRA stores them as a connected timeline of stakeholders, objections, recommendations, and outcomes.
+
+The app helps reps understand:
+
+- what happened in prior conversations
+- which objections were raised and how they were handled
+- what actions worked or failed
+- what should be discussed next
+- how the deal has evolved over time
+
+ASTRA turns historical sales context into actionable intelligence.
+
+---
+
+## The problem
+
+In enterprise sales, context gets lost across:
+
+- meetings
+- notes
+- call summaries
+- pricing conversations
+- stakeholder updates
+- objections and follow-ups
+- prior outcomes
+
+The result is that teams often repeat mistakes, miss patterns, and struggle to connect deal history to future decisions.
+
+A salesperson may remember the customer had a concern before, but not:
+
+- what was tried
+- whether it worked
+- what happened next
+- which strategy is most likely to succeed now
+
+---
+
+## The solution
+
+ASTRA is built around a simple idea: sales intelligence should remember and learn.
+
+It captures memory across the deal lifecycle and helps teams reason over it with AI-powered support.
+
+### Core loop
+
+- Retain customer interaction memory
+- Recall relevant history
+- Reflect on cause and effect
+- Recommend the next best action
+- Learn from the outcome
+
+This creates a continuous memory loop that improves decision quality over time.
+
+---
+
+## Why ASTRA is different
+
+### 1. Memory-to-outcome learning
+ASTRA does not treat objections as isolated problems. It connects:
+
+- what was said
+- what action was taken
+- how the customer responded
+- whether the approach worked
+- what should happen next time
+
+### 2. Deal timeline intelligence
+ASTRA surfaces a deal's progression over time so teams can understand how priorities, objections, and strategy evolved.
+
+### 3. Evidence-backed guidance
+Recommendations are tied back to memory and historical context, making them more explainable and trustworthy.
+
+---
+
+## Features
+
+- Deal overview and lifecycle tracking
+- Stakeholder and relationship insights
+- Memory timeline for historical context
+- AI-powered ask interface for deal guidance
+- Meeting brief generation
+- Follow-up suggestion workflows
+- Evidence-backed recommendations
+- Demo mode for product storytelling
+- Android app experience built with Jetpack Compose
+
+---
+
+## Architecture
+
+```text
+┌────────────────────────────────────────────┐
+│          ASTRA Android App               │
+│  Jetpack Compose + ViewModel + Screens    │
+└──────────────────────┬─────────────────────┘
+                       │
+                       ▼
+┌────────────────────────────────────────────┐
+│          Repository / API Layer            │
+│     Retrofit + OkHttp + Moshi + Coroutines│
+└──────────────────────┬─────────────────────┘
+                       │
+                       ▼
+┌────────────────────────────────────────────┐
+│             Hindsight API Service           │
+│    Memory retrieval + deal intelligence    │
+└──────────────────────┬─────────────────────┘
+                       │
+                       ▼
+┌────────────────────────────────────────────┐
+│             AI + Memory Orchestration       │
+│       Deal context, recommendations, insight│
+└────────────────────────────────────────────┘
+```
+
+---
+
+## Tech stack
+
+### Frontend / mobile
+- Kotlin
+- Android Jetpack
+- Jetpack Compose
+- Material 3
+- Navigation 3
+- Camera & permissions support
+
+### Networking & data
+- Retrofit
+- OkHttp
+- Moshi
+- Coroutines
+- Room
+- DataStore
+
+### AI / memory backend
+- Hindsight API integration
+- Secure API key configuration via `local.properties`
+
+---
+
+## Project structure
+
+```text
+ASTRA/
+├── app/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/com/example/astra/
+│   │   │   │   ├── data/
+│   │   │   │   ├── ui/
+│   │   │   │   ├── MainActivity.kt
+│   │   │   │   └── ...
+│   │   │   └── res/
+│   │   └── test/
+│   └── build.gradle.kts
+├── gradle/
+├── build.gradle.kts
+├── settings.gradle.kts
+├── gradlew
+├── gradlew.bat
+├── gradle.properties
+├── local.properties
+├── .gitignore
+└── README.md
+```
+
+---
+
+## Setup
+
+### Prerequisites
+
+- Android Studio
+- JDK 17+
+- Android SDK configured in Android Studio
+- GitHub account for repository access
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Geethikadasari7/Astra.git
+cd Astra
+```
+
+### 2. Configure local environment
+
+Create or edit `local.properties` in the project root:
+
+```properties
+sdk.dir=C\:\\Users\\<YourUserName>\\AppData\\Local\\Android\\Sdk
+HINDSIGHT_API_KEY=your_api_key_here
+HINDSIGHT_BASE_URL=https://api.hindsight.vectorize.io/
+```
+
+> Do not commit real API keys to GitHub. `local.properties` is typically kept local.
+
+### 3. Build the app
+
+```bash
+./gradlew assembleDebug
+```
+
+### 4. Run tests
+
+```bash
+./gradlew test
+```
+
+### 5. Launch the app
+
+Open the project in Android Studio and run the app on an emulator or physical device.
+
+---
+
+## Example user flow
+
+```text
+Landing screen
+  ↓
+Onboarding
+  ↓
+Dashboard
+  ↓
+Select deal
+  ↓
+View deal timeline and memory
+  ↓
+Ask ASTRA about next action
+  ↓
+Review evidence and recommendation
+  ↓
+Take action and update outcomes
+```
+
+---
+
+## Demo story
+
+ASTRA is positioned around an enterprise sales scenario where a deal evolves over time, stakeholders change priority, objections appear, and recommendations improve as the relationship deepens.
+
+The app demonstrates:
+
+- memory retention across interactions
+- timeline-based understanding
+- AI-guided follow-up suggestions
+- evidence-backed sales recommendations
+- improved understanding of customer concerns and outcomes
+
+---
+
+## Built by
+
+### Geethika Dasari
+AI & Software Developer
+
+**AI • Agentic Systems • Android Development • Product Thinking**
+
+---
+
+## Final message
+
+> ASTRA helps sales teams move from scattered memory to informed action.
+>
+> It remembers what happened, explains why it matters, and helps the next step feel smarter.
+
+---
+
+## License
+
+This project is currently for personal and portfolio use unless otherwise specified.
+
