@@ -11,18 +11,31 @@
   <img src="https://img.shields.io/badge/Status-MVP-success?style=for-the-badge" alt="Status" />
 </p>
 
-<p align="center">
-  <img src="<img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/2d6f416b-26fd-4ebc-973b-63a33684e086" />
-  <img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/33112e1e-97d8-4669-ae75-1f2df8f649e1" />
-" alt="ASTRA app preview" width="420" />
-</p>
-
----
 
 ## Demo & APK
 
 - Demo video + APK: [Astra - Google Drive](https://drive.google.com/drive/folders/1c3iz9FoG0Pse9abDqQvzpOQ8Zt2m9YlE)
 - Download the app from the shared Google Drive folder and try the live demo or APK directly.
+  <p align="center">
+  <table>
+    <tr>
+      <td valign="middle" align="center">
+        <img
+          src="https://github.com/user-attachments/assets/2d6f416b-26fd-4ebc-973b-63a33684e086"
+          alt="ASTRA Logo"
+          width="100"
+        />
+      </td>
+      <td valign="middle" align="center">
+        <img
+          src="https://github.com/user-attachments/assets/33112e1e-97d8-4669-ae75-1f2df8f649e1"
+          alt="ASTRA App Preview"
+          width="100"
+        />
+      </td>
+    </tr>
+  </table>
+</p>
 
 ---
 
