@@ -134,25 +134,32 @@ Recommendations are tied back to memory and historical context, making them more
 
 ## Tech stack
 
-### Frontend / mobile
+### Mobile app
 - Kotlin
-- Android Jetpack
+- Android SDK
 - Jetpack Compose
 - Material 3
-- Navigation 3
-- Camera & permissions support
+- AndroidX lifecycle, navigation, activity, and adaptive layouts
+- CameraX and location services
+- DataStore and Room for local persistence
 
-### Networking & data
+### Networking & API
 - Retrofit
 - OkHttp
 - Moshi
-- Coroutines
-- Room
-- DataStore
+- Kotlin Serialization
+- Coroutines for async processing
 
-### AI / memory backend
-- Hindsight API integration
-- Secure API key configuration via `local.properties`
+### AI / memory integration
+- Hindsight API integration for memory and insight retrieval
+- Secure configuration via `local.properties`
+- BuildConfig-based environment variables
+
+### Development tooling
+- Gradle Kotlin DSL
+- Android Studio
+- KSP for code generation
+- JUnit for testing
 
 ---
 
