@@ -17,49 +17,26 @@
 - YouTube demo: [ASTRA Demo Video](https://youtu.be/sjSPnyP2zLQ?si=wpF4cLvfP9eQdrAy)
 - Demo video + APK: [Astra - Google Drive](https://drive.google.com/drive/folders/1c3iz9FoG0Pse9abDqQvzpOQ8Zt2m9YlE)
 - Download the app from the shared Google Drive folder and try the live demo or APK directly.
-  <p align="center">
-  <table>
-    <tr>
-      <td valign="middle" align="center">
-        <img
-          src="https://github.com/user-attachments/assets/2d6f416b-26fd-4ebc-973b-63a33684e086"
-          alt="ASTRA Logo"
-          width="100"
-        />
-      </td>
-      <td valign="middle" align="center">
-        <img
-          src="https://github.com/user-attachments/assets/33112e1e-97d8-4669-ae75-1f2df8f649e1"
-          alt="ASTRA App Preview"
-          width="100"
-        />
-      </td>
-    </tr>
-  </table>
-</p>
+ <div align="center">
 
-<p align="center">
-  <table>
-    <tr>
-      <td valign="middle" align="center">
-        <img
-          src="https://github.com/user-attachments/assets/2d6f416b-26fd-4ebc-973b-63a33684e086"
-          alt="ASTRA Logo"
-          width="120"
-        />
-      </td>
-      <td valign="middle" align="center">
-        <img
-          src="https://github.com/user-attachments/assets/33112e1e-97d8-4669-ae75-1f2df8f649e1"
-          alt="ASTRA App Preview"
-          width="220"
-        />
-      </td>
-    </tr>
-  </table>
-</p>
+<table>
+<tr>
+<td align="center" valign="middle">
+<img src="https://github.com/user-attachments/assets/2d6f416b-26fd-4ebc-973b-63a33684e086" alt="ASTRA Logo" width="100">
+</td>
 
----
+<td align="center" valign="middle">
+<img src="https://github.com/user-attachments/assets/33112e1e-97d8-4669-ae75-1f2df8f649e1" alt="ASTRA App Preview" width="100">
+</td>
+
+<td align="center" valign="middle">
+<img src="https://github.com/user-attachments/assets/24c90dc3-6660-4bcb-808f-4fc738a9f89e" alt="ASTRA Architecture Diagram" width="450">
+</td>
+</tr>
+</table>
+
+</div>
+
 
 ## Overview
 
