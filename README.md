@@ -70,7 +70,7 @@ This creates a continuous memory loop that improves decision quality over time.
 
 ---
 
-## Why ASTRA is different
+## Why ASTRA is different ?
 
 ### 1. Memory-to-outcome learning
 ASTRA does not treat objections as isolated problems. It connects:
